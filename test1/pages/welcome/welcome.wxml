@@ -1,0 +1,8 @@
+<!--wxml是小程序骨架-->
+<view class="container">
+   <image class="user-size" src="/images/3.png"></image>
+   <text class="user-name">Hello，World!</text>
+   <view class="moto-container">
+     <text class="moto">进入小程序</text>
+   </view>
+</view>
