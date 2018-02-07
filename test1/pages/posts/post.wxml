@@ -1,0 +1,31 @@
+<view>
+  <swiper indicator-dots="true" autoplay="true" interval="5000" indicator-active-color="#ffffff" circular="true">
+     <swiper-item>
+          <image src="/images/wx.png">
+          </image>
+     </swiper-item>
+     <swiper-item>
+          <image src="/images/vr.png">
+          </image>     
+     </swiper-item>
+     <swiper-item>
+          <image src="/images/iqiyi.png">
+          </image>
+     </swiper-item>
+  </swiper>
+  <view class="post-container">
+     <view class="post-author-date">
+          <image class="post-author" src="/images/2.png"></image>
+          <text class="post-date">Feb 7 2018</text>
+     </view>
+     <text class="post-title">正是虾肥蟹壮时</text>
+     <image src="/images/crab.png"></image>
+     <text>好好品尝秋天的大闸蟹的味道吧！</text>
+     <view>
+          <image src="../../images/icon/chat.png"></image>
+          <text>92</text>
+          <image src="../../images/icon/view.png"></image>
+          <text>65</text>
+     </view>
+  </view>
+</view>
