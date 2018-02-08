@@ -1,9 +1,10 @@
+var postsData = require('../../data/posts-data.js')
+
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    
   },
 
 /*小程序不支持document优先的原则
@@ -17,19 +18,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-     var post_content1={
-       date:"Feb 8 2018",
-       title:"正是虾肥蟹壮时",
-       img:{
-         post_img: "/images/crab.png",
-         author_img:"/images/2.png",
-       },
-       img_condition:true,
-       content:"好好品尝秋天的大闸蟹的味道吧！",
-       view_num:"112",
-       collect_num:"96",
-     }
-     this.setData(post_content1);
+
+     this.setData({
+       posts_key:postsData.postList
+     });
   },
 
   /**
