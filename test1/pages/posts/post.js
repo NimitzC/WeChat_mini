@@ -24,7 +24,8 @@ Page({
      });
   },
 
-onPostTap:function(){
+onPostTap:function(event){
+  var postId = event.currentTarget.dataset.postId;
   console.log("onPostTap");
 }
 })

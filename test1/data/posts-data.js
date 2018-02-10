@@ -8,6 +8,7 @@ var local_database = [
     content: "好好品尝秋天的大闸蟹的味道吧！",
     view_num: "112",
     collect_num: "96",
+    postId:1,
   },
   {
     date: "Feb 8 2018",
@@ -16,7 +17,8 @@ var local_database = [
     content: "比利.林恩，绝不会令你失望！",
     view_num: "112",
     collect_num: "96",
-    author_img: "/images/1.png"
+    author_img: "/images/1.png",
+    postId:2,
   },
   {
     date: "Feb 8 2018",
@@ -25,7 +27,8 @@ var local_database = [
     content: "除夕夜迎新年，回家齐大团圆",
     view_num: "152",
     collect_num: "25",
-    author_img: "/images/2.png"
+    author_img: "/images/2.png",
+    postId: 3,
   },
   {
     date: "Feb 9 2018",
@@ -34,7 +37,8 @@ var local_database = [
     content: "经英国媒体介绍，今日Scott家庭老了一名不速之客.....",
     view_num: "12",
     collect_num: "99",
-    author_img: "/images/1.png"
+    author_img: "/images/1.png",
+    postId: 4,
   }
 ]
 
