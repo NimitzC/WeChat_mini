@@ -2,7 +2,7 @@ var postsData = require('../../data/posts-data.js')
 
 Page({
   /**
-   * 页面的初始数据
+   * 页面的初始数`据
    */
   data: {
   },
@@ -19,13 +19,17 @@ Page({
    */
   onLoad: function (options) {
 
-     this.setData({
+    // this.data.postList = postsData.postList
+     this.setData({   
        posts_key:postsData.postList
      });
   },
 
 onPostTap:function(event){
-  var postId = event.currentTarget.dataset.postId;
-  console.log("onPostTap");
+  var postid = event.currentTarget.dataset.postid;
+  //console.log("on post id is "+postid);
+  wx.navigateTo({
+    url:"post-detail/post-detail?id="+postid
+  })
 }
 })
