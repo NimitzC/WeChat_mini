@@ -73,6 +73,11 @@ Page({
       duration: 1000,
       icon: "success"
     })
+  },
 
+  onShareTap:function(event){
+    wx.showActionSheet({
+      itemList:["分享给微信好友","分享到朋友圈","分享到QQ","分享到微博"]
+    })
   }
 })
