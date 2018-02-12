@@ -1,7 +1,9 @@
 var postsData = require('../../../data/posts-data.js')
 
 Page({
-  data: {},
+  data: {
+    isPlayingMusic:false
+  },
   onLoad: function (option) {
     var postId = option.id;
     //console.log(postId)
@@ -76,8 +78,38 @@ Page({
   },
 
   onShareTap:function(event){
+    var itemList = ["分享给微信好友", "分享到朋友圈", "分享到QQ", "分享到微博"];
     wx.showActionSheet({
-      itemList:["分享给微信好友","分享到朋友圈","分享到QQ","分享到微博"]
+      itemList:itemList,
+      itemColor:"#405f80",
+      success:function(res){
+        //re.cancel
+        wx.showModal({
+          title:"用户"+itemList[res.tapIndex],
+          content:"该服务小程序暂不支持，是否取消？"+res.cancel+"非常抱歉，该功能仍在开发"
+        })
+      }
     })
+  },
+
+  onMusicTap:function(event){
+    var isPlayingMusic= this.data.isPlayingMusic;
+    if(isPlayingMusic){
+      wx.pauseBackgroundAudio();
+      this.setData({
+          isPlayingMusic:false
+      })
+    }
+    else{
+      wx.playBackgroundAudio({
+        dataUrl:'http://zhangmenshiting.qianqian.com/data2/music/34f1a52820a66d12657f2827ee0fe78f/265723035/265723035.mp3?xcode=e7a07a022772c776b123be2e4a685e68',
+        title:'大鱼',
+        //coverImgUrl:
+      })
+      this.setData({
+        isPlayingMusic: true
+      })
+    }
   }
+
 })
