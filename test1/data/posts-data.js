@@ -44,7 +44,7 @@ var local_database = [
     collect_num: "25",
     author_img: "/images/2.png",
     postId: 2,
-    headImgSrc: "/images/sls.png",
+    headImgSrc: "/images/sls.jpg",
     author: "林子怡",
     dateTime: "24小时前",
     detail: "回家的味道，回家的年味，回家的朋友，回家的兴趣。",
