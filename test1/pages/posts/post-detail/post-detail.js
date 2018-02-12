@@ -2,7 +2,7 @@ var postsData = require('../../../data/posts-data.js')
 
 Page({
   data: {
-    isPlayingMusic:false
+    isPlayingMusic: false
   },
   onLoad: function (option) {
     var postId = option.id;
@@ -29,7 +29,22 @@ Page({
       postsCollected[postId] = false;
       wx.setStorageSync('posts_collected', postsCollected)
     }
+
+    var that = this;
+    wx.onBackgroundAudioPlay(function () {
+      that.setData({
+        isPlayingMusic: true
+      });
+    }),
+
+      wx.onBackgroundAudioPause(function () {
+        that.setData({
+          isPlayingMusic: false
+        })
+      });
   },
+
+
   onCollectionTap: function (event) {
     var postsCollected = wx.getStorageSync('posts_collected');
     var postCollected = postsCollected[this.data.currentPostId];
@@ -38,12 +53,12 @@ Page({
     this.showToast(postsCollected, postCollected);
   },
 
-//showModal不使用
+  //showModal不使用
   showModal: function (postsCollected, postCollected) {
     var that = this
     wx.showModal({
       title: "收藏",
-      content: postCollected?"收藏该文章?":"取消收藏该文章?",
+      content: postCollected ? "收藏该文章?" : "取消收藏该文章?",
       showCancel: "true",
       cancelText: "取消",
       cancelColor: "#333",
@@ -77,33 +92,35 @@ Page({
     })
   },
 
-  onShareTap:function(event){
+  onShareTap: function (event) {
     var itemList = ["分享给微信好友", "分享到朋友圈", "分享到QQ", "分享到微博"];
     wx.showActionSheet({
-      itemList:itemList,
-      itemColor:"#405f80",
-      success:function(res){
+      itemList: itemList,
+      itemColor: "#405f80",
+      success: function (res) {
         //re.cancel
         wx.showModal({
-          title:"用户"+itemList[res.tapIndex],
-          content:"该服务小程序暂不支持，是否取消？"+res.cancel+"非常抱歉，该功能仍在开发"
+          title: "用户" + itemList[res.tapIndex],
+          content: "该服务小程序暂不支持，是否取消？" + res.cancel + "非常抱歉，该功能仍在开发"
         })
       }
     })
   },
 
-  onMusicTap:function(event){
-    var isPlayingMusic= this.data.isPlayingMusic;
-    if(isPlayingMusic){
+  onMusicTap: function (event) {
+    var currentPostId = this.data.currentPostId;
+    var postData = postsData.postList[currentPostId];
+    var isPlayingMusic = this.data.isPlayingMusic;
+    if (isPlayingMusic) {
       wx.pauseBackgroundAudio();
       this.setData({
-          isPlayingMusic:false
+        isPlayingMusic: false
       })
     }
-    else{
+    else {
       wx.playBackgroundAudio({
-        dataUrl:'http://zhangmenshiting.qianqian.com/data2/music/34f1a52820a66d12657f2827ee0fe78f/265723035/265723035.mp3?xcode=e7a07a022772c776b123be2e4a685e68',
-        title:'大鱼',
+        dataUrl: postData.music.dataUrl,
+        title: postData.music.title,
         //coverImgUrl:
       })
       this.setData({

@@ -8,11 +8,15 @@ var local_database = [
     content: "好好品尝秋天的大闸蟹的味道吧！",
     view_num: "112",
     collect_num: "96",
-    postId:0,
-    headImgSrc:"/images/crab.png",
-    author:"林子怡",
-    dateTime:"24小时前",
-    detail:"菊黄蟹正肥，品尝秋之味。是家人的味道，弥漫着浓浓的香气。"
+    postId: 0,
+    headImgSrc: "/images/crab.png",
+    author: "林子怡",
+    dateTime: "24小时前",
+    detail: "菊黄蟹正肥，品尝秋之味。是家人的味道，弥漫着浓浓的香气。",
+    music: {
+      dataUrl: 'http://zhangmenshiting.qianqian.com/data2/music/34f1a52820a66d12657f2827ee0fe78f/265723035/265723035.mp3?xcode=e7a07a022772c776b123be2e4a685e68',
+      title: '大鱼'
+    }
   },
   {
     date: "Feb 8 2018",
@@ -22,12 +26,15 @@ var local_database = [
     view_num: "112",
     collect_num: "96",
     author_img: "/images/1.png",
-    postId:1,
+    postId: 1,
     headImgSrc: "/images/bl.png",
     author: "比利.林恩",
     dateTime: "5小时前",
-    detail: "bilibili干杯！！bilibili万岁！bilibili，bilibili"
-  },
+    detail: "bilibili干杯！！bilibili万岁！bilibili，bilibili",
+    music: {
+      dataUrl: 'http://zhangmenshiting.qianqian.com/data2/music/ee013f47668ed90e278daa45907b4e03/564207261/564207261.mp3?xcode=edd06bbcc364ecfb2e999d51bc758b81',
+      title: '蓝色降落伞'}
+    },
   {
     date: "Feb 8 2018",
     title: "春节回家",
@@ -40,7 +47,11 @@ var local_database = [
     headImgSrc: "/images/sls.png",
     author: "林子怡",
     dateTime: "24小时前",
-    detail: "回家的味道，回家的年味，回家的朋友，回家的兴趣。"
+    detail: "回家的味道，回家的年味，回家的朋友，回家的兴趣。",
+    music: {
+      dataUrl: "http://zhangmenshiting.qianqian.com/data2/music/d5cd9c9005ff12fdc233c5b763e8cd6e/555886684/555886684.mp3?xcode=edd06bbcc364ecfb85f6fb12ebde0b01",
+      title: "安和桥"
+    }
   },
   {
     date: "Feb 9 2018",
@@ -54,7 +65,11 @@ var local_database = [
     headImgSrc: "/images/cat.png",
     author: "读心者",
     dateTime: "28小时前",
-    detail: "神奇之兔，万幸之兔，你值得拥有。"
+    detail: "神奇之兔，万幸之兔，你值得拥有。",
+    music: {
+      dataUrl: "http://zhangmenshiting.qianqian.com/data2/music/44192dcb5a7e71affb39e3636074e4f5/555886308/555886308.mp3?xcode=d4258d3aef98fc715342a3548728ab76",
+      title: "南山南"
+    }
   }
 ]
 
