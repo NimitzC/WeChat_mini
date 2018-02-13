@@ -3,7 +3,7 @@
     <image class="head-image" src="{{postData.headImgSrc}}"></image>
     <image catchtap="onMusicTap" class="audio" src="{{isPlayingMusic?'/images/music/music-stop.png':'/images/music/music-start.png'}}"></image>
     <view class="author-date">
-        <image class="avatar" src="{{postData.avatar}}"></image>
+        <image class="avatar" src="{{postData.author_img}}"></image>
         <text class="author">{{postData.author}}</text>
         <text class="const-text">发表于</text>
         <text class="date">{{postData.dateTime}}</text>
