@@ -23,7 +23,7 @@ function http(url, callBack) {
       callBack(res.data)
     },
     fail: function (error) {
-      console(error)
+      console.log(error)
     }
   })
 }
