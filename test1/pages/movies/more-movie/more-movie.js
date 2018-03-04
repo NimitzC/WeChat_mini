@@ -9,6 +9,9 @@ Page({
   data: {
     movies: {},
     navigateTitle: "",
+    requestUrl: "",
+    totalCount: 0,
+    isEmpty: true,
   },
 
   /**
@@ -29,7 +32,14 @@ Page({
         var dataUrl = app.globalData.doubanBase + "/v2/movie/top250";
         break;
     }
+    this.data.requestUrl = dataUrl;
     util.http(dataUrl, this.processDoubanData)
+  },
+
+  onScrolllower: function (event) {
+    var nextUrl = this.data.requestUrl +
+      "?start=" + this.data.totalCount + "&count=20";
+    util.http(nextUrl, this.processDoubanData)
   },
 
   processDoubanData: function (moviesDouban) {
@@ -49,6 +59,14 @@ Page({
       }
       movies.push(temp)
     }
+    var totalMovies = {}
+    if (!this.data.isEmpty) {
+      totalMovies = this.data.movies.concat(movies);
+    }
+    else {
+      totalMovies = movies;
+      this.data.isEmpty = false
+    }
     //   var readyData = {};
     //   readyData[settedKey] = {
     //     categoryTitle:categoryTitle,
@@ -57,8 +75,9 @@ Page({
     //   this.setData(readyData);
     // },
     this.setData({
-      movies: movies
-    })
+      movies: totalMovies
+    });
+    this.data.totalCount += 20;
   },
 
   onReady: function (event) {
