@@ -40,6 +40,14 @@ Page({
     var nextUrl = this.data.requestUrl +
       "?start=" + this.data.totalCount + "&count=20";
     util.http(nextUrl, this.processDoubanData)
+    wx.showNavigationBarLoading()
+  },
+
+  onPullDownRefresh:function(event){
+    var refreshUrl = this.data.requestUrl +
+    "?start=0&count=20";
+    util.http(refreshUrl, this.processDoubanData);
+    wx.showNavigationBarLoading();
   },
 
   processDoubanData: function (moviesDouban) {
@@ -59,7 +67,7 @@ Page({
       }
       movies.push(temp)
     }
-    var totalMovies = {}
+    var totalMovies = {} //suo you de shu ju he bing zai yi qi
     if (!this.data.isEmpty) {
       totalMovies = this.data.movies.concat(movies);
     }
@@ -78,6 +86,8 @@ Page({
       movies: totalMovies
     });
     this.data.totalCount += 20;
+    wx.hideNavigationBarLoading();
+    wx.stopPullDownRefresh();
   },
 
   onReady: function (event) {
