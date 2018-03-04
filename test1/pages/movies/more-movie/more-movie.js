@@ -46,6 +46,8 @@ Page({
   onPullDownRefresh:function(event){
     var refreshUrl = this.data.requestUrl +
     "?start=0&count=20";
+    this.data.movies = {};
+    this.data.isEmpty = true;
     util.http(refreshUrl, this.processDoubanData);
     wx.showNavigationBarLoading();
   },
