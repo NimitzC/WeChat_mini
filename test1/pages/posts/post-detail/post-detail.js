@@ -29,11 +29,11 @@ Page({
       postsCollected[postId] = false;
       wx.setStorageSync('posts_collected', postsCollected)
     }
-    if(app.globalData.g_isPlayingMusic && app.globalData.g_currentMusicPostId==postId ){
-         //this.data.isPlayingMusic = tr&& app,globalData.g_uue;
-         this.setData({
-           isPlayingMusic:true
-         })
+    if (app.globalData.g_isPlayingMusic && app.globalData.g_currentMusicPostId == postId) {
+      //this.data.isPlayingMusic = tr&& app,globalData.g_uue;
+      this.setData({
+        isPlayingMusic: true
+      })
     }
     this.setMusicMonitor();
   },
@@ -55,6 +55,14 @@ Page({
         app.globalData.g_isPlayingMusic = false;
         app.globalData.g_currentMusicPostId = null;
       });
+
+    wx.onBackgroundAudioStop(function () {
+      that.setData({
+        isPlayingMusic: false
+      })
+      app.globalData.g_isPlayingMusic = false;
+      app.globalData.g_currentMusicPostId = null;
+    });
   },
 
 

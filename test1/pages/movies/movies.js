@@ -7,6 +7,7 @@ Page({
     inTheaters: {},
     comingSoon: {},
     top250: {},
+    searchResult:{},
     containerShow:true,
     searchPanelShow:false,
   },
@@ -43,7 +44,7 @@ Page({
         that.processDoubanData(res.data, settedKey, categoryTitle)
       },
       fail: function (error) {
-        console(error)
+        console.log(error)
       }
     })
   },
@@ -51,7 +52,8 @@ Page({
   onCancelImgTap:function(event){
     this.setData({
       containerShow:true,
-      searchPanelShow:false
+      searchPanelShow:false,
+      searchResult:{},
     })
   },
 
@@ -60,6 +62,13 @@ Page({
       containerShow:false,
       searchPanelShow:true
     })
+  },
+
+  onBindChange:function(event){
+     var text=event.detail.value;
+     //console.log(text)
+     var searchUrl = app.globalData.doubanBase + "/v2/movie/search?q=" + text;
+     this.getMovieListData(searchUrl, "searchResult","");
   },
 
   processDoubanData: function (moviesDouban,settedKey,categoryTitle) {

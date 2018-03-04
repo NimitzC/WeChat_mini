@@ -1,4 +1,5 @@
 @import "movie-list/movie-list-template.wxss";
+@import "movie-grid/movie-grid-template.wxss";
 
 .container{
   background-color: #f2f2f2;
@@ -39,7 +40,6 @@
 }
 
 .xx-img{
-  color:#d1d1d1;
   height:30rpx;
   width:30rpx;
   margin:auto 0 auto 10rpx;
