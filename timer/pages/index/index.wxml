@@ -1,0 +1,14 @@
+<view>
+<text>这里要添加个计时器</text>
+</view>
+<view>
+  <text>timeclocker</text>
+</view>
+<form>
+  <view class="section">
+    <view class="section__title">input</view>
+    <input name="input" placeholder="please input here" />
+  </view>
+</form>
+
+<!-- wx.vibrateShort(OBJECT) -->
