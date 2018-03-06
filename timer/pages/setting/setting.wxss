@@ -25,3 +25,9 @@
 .section section_gap{
   margin-left:20rpx;
 }
+
+.setting_button1{
+  font-size: 20rpx;
+  color:#999;
+  margin-left:40rpx;
+}
