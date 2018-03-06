@@ -2,14 +2,15 @@
 	padding:15rpx 10rpx;
 }
 .section{
-	margin-bottom: 10rpx;
+	margin-bottom: 100rpx;
 }
 .section_title{
-	font-size: 20px;
+	font-size: 30rpx;
 	color:#999;
+  margin-left:40rpx;
 }
 .section_check{
-	margin-right: 5rpx;
+	margin-right: 100rpx;
 }
 .section_tip{
 	display: block;
@@ -18,5 +19,9 @@
 	padding-bottom: 10rpx;
 }
 .section_body{
-	margin-top: 15rpx;
+	margin-top: 100rpx;
+}
+
+.section section_gap{
+  margin-left:20rpx;
 }
