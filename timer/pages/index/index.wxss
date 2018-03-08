@@ -93,14 +93,14 @@
 .timer_circle--left {
   left: 0;
   border-left: 3px solid #13227a;
-  border-bottom: 3px solid #fff;
+  border-bottom: 3px solid #13227a;
   transform: rotate(45deg);
 }
 
 .timer_circle--right {
   right: 0;
   border-right: 3px solid #13227a;
-  border-bottom: 3px solid #fff;
+  border-bottom: 3px solid #13227a;
   transform: rotate(-45deg);
 }
 
@@ -200,9 +200,9 @@
 }
 
 .timer--runing .timer_ctrl {
-  background-color: #208DEA;
-  height: 30px;
-  margin-bottom: 30px;
+  background-color: #13227a;
+  height: 60rpx;
+  margin-bottom: 420rpx;
   border: 1px dashed #dedede;
-  border-radius: 20px;
+  border-radius: 40rpx;
 }

@@ -1,18 +1,24 @@
 <form bindsubmit="formSubmit" bindreset="formReset">
   <view class="section section_gap">
     <view class="section_title">专注时长</view>
-    <slider name="slider" activeColor="#13227a" min="0" max="60" step="5" show-value></slider>
+    <slider bindchange="changeWorkTime" value="{{workTime}}" name="slider" activeColor="#13227a" min="0" max="60" step="5" show-value></slider>
   </view>
 
   <view class="section section_gap">
     <view class="section_title">休息时长</view>
-    <slider name="slider" activeColor="#13227a" min="0" max="20" show-value></slider>
+    <slider bindchange="changeRestTime" value="{{restTime}}" name="slider" activeColor="#13227a" min="0" max="20" show-value></slider>
   </view>
 
-  <view class="section section_gap">
-    <view class="section_title">switch</view>
-    <switch name="switch" />
+  <view class="section section_gap2">
+  <view class="section section_gap2">
+    <text class="section_title">震动</text>
+    <switch color="#13227a" name="switch" />
+     </view>
+     <view class="section section_gap2">
+    <text class="section_title">屏幕常亮  </text>
+    <switch color="#13227a" name="switch" />
+  </view>
   </view>
 
-<button class="setting_button1" bindtap="setLoading">点击设置以上按钮loading属性</button>
+  <button type="primary" class="setting_button1" bindtap="setLoading">小云番茄钟的说明</button>
 </form>

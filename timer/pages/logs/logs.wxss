@@ -1,8 +1,28 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+.container{
+	padding-bottom: 50px;
+	max-height: 92%;
 }
-.log-item {
-  margin: 10rpx;
+.log {
+	color: #999;
+	margin: 15px 10px;
+}
+.log_item{
+	padding: 15px 5px;
+}
+.log_item text {
+	padding-right: 20px;
+}
+.clear{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+.clear .clear_btn {
+	margin-left: 280rpx;
+  margin-bottom:30rpx;
+	height: 70rpx;
+	line-height: 35px;
+	color:#fff;
+	background-color: #13227a;
+	border-radius: 4px;
 }
