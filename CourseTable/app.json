@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle": "dark",
+    "navigationBarTitleText": "课程表",
+    "navigationBarBackgroundColor": "#13227a",
+    "navigationBarTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#13227a",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/none_time.png",
+        "selectedIconPath": "images/time.png",
+        "text": "计时"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "iconPath": "images/none_setting.png",
+        "selectedIconPath": "images/setting.png",
+        "text": "设置"
+      }
+    ]
+  }
+}
