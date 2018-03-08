@@ -17,7 +17,7 @@
 }
 
 .usermotto {
-  margin-top: 200px;
+  margin-top: 400rpx;
 }
 
 .container {
@@ -34,7 +34,7 @@
   flex: 2;
   justify-content: center;
   align-items: center;
-  margin-top: -45px;
+  margin-top: -90rpx;
   text-align: center;
   background-color: #fff;
   transition: all .5s;
@@ -46,8 +46,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
-  height: 150px;
+  width: 300rpx;
+  height: 300rpx;
   text-align: center;
   transition: all .3s;
 }
@@ -55,8 +55,8 @@
 .timer_progress {
   position: absolute;
   top: 0;
-  width: 75px;
-  height: 150px;
+  width: 150px;
+  height: 300rpx;
   overflow: hidden;
   transition: all .3s;
 }
@@ -67,7 +67,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  border: 3px solid #13227a;
+  border: 6rpx solid #13227a;
   opacity: 1;
   border-radius: 100%;
 }
@@ -83,8 +83,8 @@
 .timer_circle {
   position: absolute;
   top: 0;
-  width: 150px;
-  height: 150px;
+  width: 300rpx;
+  height: 300rpx;
   border: 3px solid transparent;
   border-radius: 100%;
   transition: all .3s;
@@ -92,22 +92,22 @@
 
 .timer_circle--left {
   left: 0;
-  border-left: 3px solid #13227a;
-  border-bottom: 3px solid #13227a;
+  border-left: 6rpx solid #13227a;
+  border-bottom: 6rpx solid #13227a;
   transform: rotate(45deg);
 }
 
 .timer_circle--right {
   right: 0;
-  border-right: 3px solid #13227a;
-  border-bottom: 3px solid #13227a;
+  border-right: 6rpx solid #13227a;
+  border-bottom: 6rpx solid #13227a;
   transform: rotate(-45deg);
 }
 
 .timer_time-right {}
 
 .timer_time {
-  font-size: 40px;
+  font-size: 80rpx;
   color: #13227a;
   font-weight: lighter;
   transition: font-size .3s;
@@ -116,14 +116,14 @@
 .timer_taskName {
   position: absolute;
   top: -100px;
-  font-size: 14px;
-  letter-spacing: 5px;
+  font-size: 28rpx;
+  letter-spacing: 10rpx;
   color: #fff;
 }
 
 .timer_done {
-  width: 64px;
-  height: 64px;
+  width: 128rpx;
+  height: 128rpx;
 }
 
 .timer_inputname {
@@ -173,22 +173,22 @@
 }
 
 .timer--runing .timer_time {
-  font-size: 45px;
+  font-size: 90rpx;
 }
 
 .timer--runing .timer_time-wrap {
-  width: 200px;
-  height: 200px;
+  width: 400rpx;
+  height: 400rpx;
 }
 
 .timer--runing .timer_progress {
-  width: 100px;
-  height: 200px;
+  width: 200rpx;
+  height: 400rpx;
 }
 
 .timer--runing .timer_circle {
-  width: 200px;
-  height: 200px;
+  width: 400rpx;
+  height: 400rpx;
 }
 
 .timer--runing .timer_footer {
@@ -203,6 +203,6 @@
   background-color: #13227a;
   height: 60rpx;
   margin-bottom: 420rpx;
-  border: 1px dashed #dedede;
+  border: 2rpx dashed #dedede;
   border-radius: 40rpx;
 }
