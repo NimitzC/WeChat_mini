@@ -1,1 +1,52 @@
-<text>增设了一个说明页</text>
+<scroll-view class="grid-container"
+  scroll-y="true" scroll-x="false"
+  bindscrolltolower = "onScrolllower">
+<view>
+<text class="biaoti">番茄工作法</text>
+</view>
+<view class="zhengwencontainer">
+<text class="zhengwen" space="true">  番茄工作法是简单易行的时间管理方法，选定一个待完成的任务，打开番茄钟的倒计时功能；在中途不允许做任何与这个任务无关的事情。倒计时完成后可以自行选择继续工作还是休息，一般休息5分钟后重新投入工作；可以极大地提高工作效率。</text></view>
+<view>
+<text class="biaoti">使用说明</text>
+</view>
+<text class="biaoti2">1)开始界面</text>
+<view class="zhengwencontainer">
+<text class="zhengwen">a)开始界面的中央处有倒计时钟，分布在其下的为开始与休息两个button，点下任一个即可触发该事件对应的倒计时进行计时(番茄钟开始工作)。</text>
+</view>
+<view class="zhengwencontainer">
+<text class="zhengwen">b)在buttons的下方有一个自动聚焦的input框，在此处输入想要赚住的任务，然后点击上方的button即可进行专注工作。</text>
+</view>
+<view class="zhengwencontainer">
+<text class="zhengwen">c)最下方为tabBar，第一个即为开始界面，第二个为记录界面，第三个为设置界面</text>
+</view>
+<text class="biaoti2">2)记录界面</text>
+<view class="zhengwencontainer">
+<text class="zhengwen">会显示"时间段+任务名"，时刻提醒自己做了些什么。底部正中央有个"清除记录"的选项，点击后就会将所有记录删除</text>
+</view>
+<text class="biaoti2">3)设置界面</text>
+<view class="zhengwencontainer">
+<text class="zhengwen">a)时间可调:最上方有两个slider，是用来调工作时长与休息时长的。</text>
+</view>
+<view class="zhengwencontainer">
+<text class="zhengwen">b)两个switch：一个控制倒计时的时候可以播放音乐，另外一个保证倒计时的时候屏幕不会熄灭。</text>
+</view>
+
+<text class="biaoti">待增加功能</text>
+<view class="zhengwencontainer">
+<text class="zhengwen">a)统计界面，将一天记录的时间按类别区分开，并利用图标的形式进行表示。</text>
+</view>
+<view class="zhengwencontainer">
+<text class="zhengwen">b)处理交互效果，增加触发事件的动画特性。</text>
+</view>
+<view class="zhengwencontainer">
+<text class="zhengwen">c)美化界面，可能需要对UI界面进行重构。</text>
+</view>
+
+<text class="biaoti">联系方式</text>
+<view class="zhengwencontainer">
+<text class="zhengwen2">QQ:  ****</text>
+</view>
+<view class="zhengwencontainer">
+<text class="zhengwen2">Github:  YunLambert</text>
+</view>
+</scroll-view>

@@ -11,7 +11,7 @@
 
   <view class="section section_gap2">
   <view class="section section_gap2">
-    <text class="section_title">震动</text>
+    <text class="section_title">背景音乐</text>
     <switch color="#13227a" name="switch" />
      </view>
      <view class="section section_gap2">
@@ -19,6 +19,7 @@
     <switch color="#13227a" name="switch" />
   </view>
   </view>
-
+<view class="section section_gap2">
   <button type="primary" class="setting_button1" bindtap="setLoading">小云番茄钟的说明</button>
+  </view>
 </form>
