@@ -41,6 +41,9 @@
 <view class="zhengwencontainer">
 <text class="zhengwen">c)美化界面，可能需要对UI界面进行重构。</text>
 </view>
+<view class="zhengwencontainer">
+<text class="zhengwen">d)音乐播放功能，多增加几首音乐并实现可选项。</text>
+</view>
 
 <text class="biaoti">联系方式</text>
 <view class="zhengwencontainer">
